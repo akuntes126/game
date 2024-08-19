@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="image.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image.jpg" alt="Logo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <section class="game-list" data-name="Pac-Man">
+        <h2>Select a Game to Play</h2>
+        <div class="game-item">
+            <a href="pacman-js-master/pacman.html">
+                <img src="pacman-js-master/thumbnail.jpg" alt="Pac-Man" />
+                <p>Pac-Man</p>
+            </a>
+        </div>
+        <div class="game-item" data-name="tetris">
+            <a href="javascript-tetris-master/index.html">
+                <img src="javascript-tetris-master/thumbnail.jpg" alt="Tetris" />
+                <p>Tetris</p>
+            </a>
+        </div>
+        <div class="game-item" data-name="Snake game">
+            <a href="snake-game/dist/index.html">
+                <img src="snake-game/thumbnail.jpg" alt="snake game" />
+                <p>snake game</p>
+            </a>
+        </div>
+        <div class="game-item" >
+            <a href="Pong-Game-main/index.html">
+                <img src="Pong-Game-main/thumbnail.png" alt="pong" />
+                <p>pong</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="Flappy-Bird-Game-main/index.html">
+                <img src="Flappy-Bird-Game-main/thumbnail.png" alt="flappy" />
+                <p>flappy man</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="TicTacToe-main/TicTacToe-main/index.html">
+                <img src="TicTacToe-main/thumbnail.png" alt="tiktaktu" />
+                <p>tiktaktu</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="Tebak angka/index.html">
+                <img src="Tebak angka/thumbnail.png" alt="tebak angka" />
+                <p>tebak angka</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="2048-master/index.html">
+                <img src="2048-master/thumbnail.png" alt="2048" />
+                <p>2048</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="black-jack-master/index.html">
+                <img src="black-jack-master/thumbnail.png" alt="black jack" />
+                <p>Black Jack</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="breakout-master/breakout-master/index.html">
+                <img src="breakout-master/thumbnail.png" alt="breakout" />
+                <p>Breakout master</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="candy-crush-master/index.html">
+                <img src="candy-crush-master/thumbnail.png" alt="candy crush" />
+                <p>Candy Crush</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="Connect4-master/index.html">
+                <img src="Connect4-master/thumbnail.png" alt="connect 4" />
+                <p>Connect 4</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="doodle-jump-master/index.html">
+                <img src="doodle-jump-master/thumbnail.png" alt="doodle jump" />
+                <p>doodle jump</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="fighting-game-main/index.html">
+                <img src="fighting-game-main/thumbnail.png" alt="ninja fighting" />
+                <p>ninja fighting</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="Minesweeper-master/index.html">
+                <img src="Minesweeper-master/thumbnail.png" alt="minesweeper" />
+                <p>Minesweeper</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="mini-games-html-css-js-basic-main/mini-games-html-css-js-basic-main/index.html">
+                <img src="mini-games-html-css-js-basic-main/thumbnail.png" alt="mini games" />
+                <p>Mini games</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="Sudoku-master/index.html">
+                <img src="Sudoku-master/thumbnail.png" alt="sudoku" />
+                <p>sudoku</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="slide-puzzle-master/slide-puzzle-master/index.html">
+                <img src="slide-puzzle-master/thumbnail.png" alt="slide puzzle" />
+                <p>slide puzzle game</p>
+            </a>
+        </div>
+        <div class="game-item">
+            <a href="space-invaders-master/index.html">
+                <img src="space-invaders-master/thumbnail.png" alt="spcae invader" />
+                <p>space invader</p>
+            </a>
+        </div>
+    </section>
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const gameItems = document.querySelectorAll('.game-item');
+
+            gameItems.forEach(item => {
+                const name = item.getAttribute('data-name').toLowerCase();
+                if (name.includes(query)) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 GameSite. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>
